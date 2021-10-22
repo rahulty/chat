@@ -1,0 +1,22 @@
+#map {
+  flex: 1;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+	flex-direction: column;
+	background: rgba(0,0,0,0.9);
+	color: white;
+}
+
+	.widgetContainer {
+		height: 40rem;
+		width: 40rem;
+		position: relative;
+		margin: 10vh auto;
+		display: flex;
+		flex-direction: column;
+	}
