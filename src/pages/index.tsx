@@ -2,7 +2,7 @@ import { Fragment } from "preact";
 import { Widget } from "../comps/widget";
 import useGlobal from "../store";
 import { LoginForm } from "./login-form";
-import { MessageForm } from "./message-form";
+import { MessagePage } from "./message-page";
 
 export function MainPage() {
   const [globalState, globalActions] = useGlobal();
@@ -22,7 +22,7 @@ export function MainPage() {
                 <button onClick={globalActions.logout}>Logout</button>
               </div>
 
-              <MessageForm />
+              <MessagePage />
             </div>
             {globalState.showWidget && <Widget command={globalState.command} />}
           </Fragment>
