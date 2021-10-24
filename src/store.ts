@@ -6,7 +6,9 @@ const initialState = {
   username: null,
   socket: null,
   showWidget: false,
-  command: null
+  command: null,
+  showSnackbar: false,
+  snackMessage: null
 };
 
 const useGlobal = globalHook(Preact, initialState, actions);

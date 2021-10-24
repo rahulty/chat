@@ -13,8 +13,9 @@ export function LoginForm() {
   return (
     <div className="loginFormContainer">
       <h1>Login</h1>
-      <form onSubmit={onSubmit}>
+      <form id="loginForm" onSubmit={onSubmit}>
         <TextField id="usr" placeholder="Username" />
+        <TextField type="password" id="pwd" placeholder="Password" />
         <input type="submit" value="Let's Chat" />
       </form>
     </div>

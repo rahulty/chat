@@ -1,7 +1,30 @@
 import { io } from "socket.io-client";
 
-export const login = (store, username) => {
-  store.setState({ username });
+export const showSnackBar = (store, message) => {
+  store.setState({ showSnackbar: true, snackMessage: message });
+  setTimeout(() => {
+    store.setState({ showSnackBar: false });
+  }, 3000);
+};
+
+export const signUp = (store, username, password) => {
+  const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
+  localStorage.setItem(
+    "users",
+    JSON.stringify([{ username, password }, ...existingUsers])
+  );
+  store.actions.showSnackBar("Signed up successfully!!");
+};
+
+export const login = (store, username, password) => {
+  const users = JSON.parse(localStorage.getItem("users") || "[]");
+  const me = users.find(
+    (u) => u.username === username && u.password === password
+  );
+
+  if (me) {
+    store.setState({ username });
+  }
 };
 
 export const logout = (store) => {
