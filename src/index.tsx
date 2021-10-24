@@ -3,6 +3,7 @@ import { render } from "preact";
 import { useEffect } from "preact/hooks";
 import useGlobal from "./store";
 import { MainPage } from "./pages";
+import { Snackbar } from "./comps/snackbar";
 // import { StateContext } from "./context";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <div class="container">
       <MainPage />
+      <Snackbar />
     </div>
   );
 }

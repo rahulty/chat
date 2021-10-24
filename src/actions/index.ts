@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 export const showSnackBar = (store, message) => {
   store.setState({ showSnackbar: true, snackMessage: message });
   setTimeout(() => {
-    store.setState({ showSnackBar: false });
+    store.setState({ showSnackbar: false });
   }, 3000);
 };
 
