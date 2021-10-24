@@ -7,7 +7,7 @@ function MessageBox({ msg, by }) {
   return <div class={`msg ${by === "me" ? "myMsg" : "otherMsg"}`}>{msg}</div>;
 }
 
-export function MessagePage() {
+export function ChatPage() {
   const [globalState, globalActions] = useGlobal();
   const [msgs, setMsgs] = useState([]);
 
