@@ -20,7 +20,7 @@ export function LoginForm() {
       <div className="loginFormContainer">
         <h1>Login</h1>
         <Form id="loginForm" onSubmit={onSubmit}>
-          <TextField id="username" placeholder="Username" />
+          <TextField autofocus id="username" placeholder="Username" />
           <TextField type="password" id="password" placeholder="Password" />
           <input type="submit" value="Let's Chat" />
         </Form>

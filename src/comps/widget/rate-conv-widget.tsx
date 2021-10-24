@@ -1,3 +1,5 @@
+import { StarRating } from "./star-rating";
+
 export function RateConversationWidget() {
-  return null;
+  return <StarRating value={3} />;
 }

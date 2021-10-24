@@ -1,19 +1,20 @@
 import { SignupForm } from "../comps/signup-form";
 import { LoginForm } from "../comps/login-form";
+import { Fragment } from "preact";
 
 export function LoginPage() {
   return (
-    <div id="loginPage">
+    <Fragment>
       <div id="loginNavbar">
         <div>Login</div>
         <div>Sign Up</div>
       </div>
-      <div class="page">
+      <div class="">
         <LoginForm />
       </div>
-      <div class="page">
+      <div class="">
         <SignupForm />
       </div>
-    </div>
+    </Fragment>
   );
 }

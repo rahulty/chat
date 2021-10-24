@@ -10,10 +10,10 @@ export function MainPage() {
 
   return (
     <div id="mainSlider" class={globalState.username ? "slide" : ""}>
-      <div class="page">
+      <div class="page" id="loginPage">
         <LoginPage />
       </div>
-      <div class="page">
+      <div class="page" id="chatPage">
         {globalState.username && (
           <Fragment>
             <div id="chatBox">

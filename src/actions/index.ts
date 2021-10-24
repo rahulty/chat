@@ -1,7 +1,9 @@
 import { io } from "socket.io-client";
+import { initialState } from "./initial";
 
 export const showSnackBar = (store, message) => {
   store.setState({ showSnackbar: true, snackMessage: message });
+
   setTimeout(() => {
     store.setState({ showSnackbar: false });
   }, 3000);
@@ -30,7 +32,7 @@ export const login = (store, username, password) => {
 };
 
 export const logout = (store) => {
-  store.setState({ username: null });
+  store.setState({ ...initialState, socket: store.state.socket });
 };
 
 export const connectAndListen = (store) => {
@@ -45,7 +47,6 @@ export const connectAndListen = (store) => {
     console.log("command", response);
     store.setState({ command: response.command, showWidget: true });
   });
-  socket.emit("command");
   store.setState({ socket });
 };
 
