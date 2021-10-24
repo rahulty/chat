@@ -1,8 +1,8 @@
 import { Fragment } from "preact";
 import { Widget } from "../comps/widget";
 import useGlobal from "../store";
-import { LoginForm } from "./login-form";
-import { MessagePage } from "./message-page";
+import { ChatPage } from "./chat-page";
+import { LoginPage } from "./login-page";
 
 export function MainPage() {
   const [globalState, globalActions] = useGlobal();
@@ -11,7 +11,7 @@ export function MainPage() {
   return (
     <div id="mainSlider" class={globalState.username ? "slide" : ""}>
       <div class="page">
-        <LoginForm />
+        <LoginPage />
       </div>
       <div class="page">
         {globalState.username && (
@@ -22,7 +22,7 @@ export function MainPage() {
                 <button onClick={globalActions.logout}>Logout</button>
               </div>
 
-              <MessagePage />
+              <ChatPage />
             </div>
             {globalState.showWidget && <Widget command={globalState.command} />}
           </Fragment>
