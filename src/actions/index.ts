@@ -7,7 +7,7 @@ export const showSnackBar = (store, message) => {
   }, 3000);
 };
 
-export const signUp = (store, username, password) => {
+export const signup = (store, username, password) => {
   const existingUsers = JSON.parse(localStorage.getItem("users") || "[]");
   localStorage.setItem(
     "users",
@@ -24,6 +24,8 @@ export const login = (store, username, password) => {
 
   if (me) {
     store.setState({ username });
+  } else {
+    store.actions.showSnackBar("Invalid User!! Try Sign Up");
   }
 };
 
