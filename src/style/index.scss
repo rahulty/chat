@@ -33,7 +33,7 @@ html, body {
 }
 
 .slide{
-	transform: translate(-100vw,0px);
+	transform: translate(-50%,0px);
 }
 
 #snackbarContainer{
@@ -44,7 +44,7 @@ html, body {
 	display: flex;
 	justify-content: center;
 	z-index: 10;
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in;
 	transform: translate(0px, -100%);
 	#snackbar{
 		background: #151515;
@@ -56,3 +56,29 @@ html, body {
 .snackSlide{
 	transform: translate(0px, 50%) !important;
 }
+
+.star {
+  color: #ff9933;
+	cursor: pointer;
+	font-size: 3rem;
+}
+
+.txtField{
+	border-radius: 10px;
+	&:focus{
+		outline: none;
+	}
+}
+
+.btn {
+  padding: 10px;
+  background: #e3dff5;
+	align-items: center;
+	display: flex;
+	font-weight: 600;
+  border-radius: 10px;
+	cursor: pointer;
+	user-select: none;
+	color: black;
+}
+

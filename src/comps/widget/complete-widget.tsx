@@ -11,9 +11,11 @@ export function CompleteWidget({ data }) {
   }
 
   return (
-    <div>
+    <div id="completeCTA">
       {data.map((d) => (
-        <button onClick={onClick}>{d}</button>
+        <div class="btn" onClick={onClick}>
+          {d}
+        </div>
       ))}
     </div>
   );
