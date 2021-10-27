@@ -1,20 +1,32 @@
 import { SignupForm } from "../comps/signup-form";
 import { LoginForm } from "../comps/login-form";
-import { Fragment } from "preact";
+import { useState } from "preact/hooks";
 
 export function LoginPage() {
+  const [showLoginForm, setShowLoginForm] = useState(true);
+
   return (
-    <Fragment>
+    <div id="loginContainer">
       <div id="loginNavbar">
-        <div>Login</div>
-        <div>Sign Up</div>
+        <div class="navBtns">
+          <div
+            class={`navBtn ${showLoginForm ? "active" : ""}`}
+            onClick={() => setShowLoginForm(true)}
+          >
+            Login
+          </div>
+          <div
+            class={`navBtn ${showLoginForm ? "" : "active"}`}
+            onClick={() => setShowLoginForm(false)}
+          >
+            Sign Up
+          </div>
+        </div>
       </div>
-      <div class="">
+      <div id="loginSlider" class={showLoginForm ? "" : "slide"}>
         <LoginForm />
-      </div>
-      <div class="">
         <SignupForm />
       </div>
-    </Fragment>
+    </div>
   );
 }

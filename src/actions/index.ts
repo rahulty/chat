@@ -71,3 +71,18 @@ export const setShowWidget = (store, showWidget: boolean) => {
     command: showWidget ? store.state.command : null
   });
 };
+
+export const onDayClick = (store, day) => {
+  store.actions.sendMessage(day);
+  store.setState({
+    showWidget: false,
+    command: null
+  });
+};
+export const onRateClick = (store, rateVal) => {
+  store.actions.sendMessage(rateVal);
+  store.setState({
+    showWidget: false,
+    command: null
+  });
+};

@@ -1,4 +1,6 @@
-export function Form({ onSubmit, children, autocomplete, ...otherProps }) {
+export function Form(props) {
+  const { onSubmit, children, autocomplete, ...otherProps } = props;
+
   function onS(e) {
     e.preventDefault();
     const txtInputs: NodeListOf<HTMLInputElement> = e.target.querySelectorAll(

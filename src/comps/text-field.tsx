@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "preact/hooks";
 
 export function TextField(props) {
-  const { placeholder, id, name, type, icon, iconPosition, label } = props;
+  const { placeholder, id, name, class: cls, type } = props;
   const ref = useRef();
   useEffect(() => {
     if (props.autofocus) {
@@ -17,6 +17,7 @@ export function TextField(props) {
       id={id}
       name={name || id}
       placeholder={placeholder}
+      class={cls || "txtField"}
     />
   );
 }

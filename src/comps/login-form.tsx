@@ -17,12 +17,12 @@ export function LoginForm() {
 
   return (
     <Fragment>
-      <div className="loginFormContainer">
+      <div className="loginFormContainer formContainer">
         <h1>Login</h1>
         <Form id="loginForm" onSubmit={onSubmit}>
           <TextField autofocus id="username" placeholder="Username" />
           <TextField type="password" id="password" placeholder="Password" />
-          <input type="submit" value="Let's Chat" />
+          <input class="btn" type="submit" value="Let's Chat" />
         </Form>
       </div>
     </Fragment>

@@ -14,12 +14,12 @@ export function SignupForm() {
   }
 
   return (
-    <div className="signupFormContainer">
+    <div className="signupFormContainer formContainer">
       <h1>Sign Up</h1>
       <Form id="signupForm" onSubmit={onSubmit}>
         <TextField id="SU_username" placeholder="Username" />
         <TextField id="SU_password" type="password" placeholder="Password" />
-        <input type="submit" value="Sign Up" />
+        <input class="btn" type="submit" value="Sign Up" />
       </Form>
     </div>
   );
